@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Women Fashion Store</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            Women Fashion Store
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#home">Home</a></li>
+
+               
+                <li><a href="#categories">Categories</a></li>
+
+                <li><a href="#products">Products</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+        <div class="nav-icons">
+
+            <button id="wishlistBtn">
+
+                ❤️
+                <span id="wishlistCount">0</span>
+
+            </button>
+
+            <button id="cartBtn">
+
+                🛒
+                <span id="cartCount">0</span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+
+                Discover Your Perfect Style
+
+            </h1>
+
+            <p>
+
+                Elegant fashion for every occasion.
+
+            </p>
+
+            <button class="shop-btn" onclick="scrollToShop()">
+            Shop Now
+             </button>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ================= FEATURED ================= -->
+
+    <section id="featured" class="featured">
+
+        <h2>
+
+            Featured Collection
+
+        </h2>
+
+        <div class="featured-grid">
+
+
+            <div class="featured-card"
+            onclick="featuredFilter('saree')">
+
+                <img src="https://images.pexels.com/photos/6382264/pexels-photo-6382264.jpeg">
+
+                <h3>Elegant Sarees</h3>
+
+            </div>
+
+
+            <div class="featured-card" onclick="featuredFilter('kurti')">
+
+                <img src="https://images.pexels.com/photos/28213774/pexels-photo-28213774.jpeg">
+
+                <h3>Designer Kurtis</h3>
+
+            </div>
+
+
+            <div class="featured-card" onclick="featuredFilter('dress')">
+
+                <img src="https://images.pexels.com/photos/1462637/pexels-photo-1462637.jpeg">
+
+                <h3>Party Dresses</h3>
+
+            </div>
+
+
+            <div class="featured-card" onclick="featuredFilter('top')">
+
+                <img src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg">
+
+                <h3>Western Tops</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section id="categories" class="categories">
+
+        <h2>
+
+            Shop By Category
+
+        </h2>
+
+        <div class="category-buttons">
+
+            <button onclick="filterProducts('all')">
+
+                All
+
+            </button>
+
+            <button onclick="filterProducts('saree')">
+
+                Sarees
+
+            </button>
+
+            <button onclick="filterProducts('kurti')">
+
+                Kurtis
+
+            </button>
+
+            <button onclick="filterProducts('dress')">
+
+                Dresses
+
+            </button>
+
+            <button onclick="filterProducts('top')">
+
+                Tops
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section id="products" class="products">
+
+        <h2>
+
+            Our Products
+
+        </h2>
+
+        <div class="product-grid">
+
+
+            <!-- Product -->
+
+            <div class="product-card saree">
+
+                <img src="https://images.pexels.com/photos/10317106/pexels-photo-10317106.jpeg">
+
+                <h3>Silk Saree</h3>
+
+                <p>₹999</p>
+
+                <div class="card-buttons">
+
+                    <button onclick="toggleWishlist('Silk Saree',999)">
+
+                        ❤️ Wishlist
+
+                    </button>
+
+                    <button onclick="addToCart('Silk Saree',999)">
+
+                        🛒 Add To Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="product-card kurti">
+
+                <img src="https://images.pexels.com/photos/28949640/pexels-photo-28949640.jpeg">
+
+                <h3>Floral Kurti</h3>
+
+                <p>₹699</p>
+
+                <div class="card-buttons">
+
+                    <button onclick="toggleWishlist('Floral Kurti',699)">
+
+                        ❤️ Wishlist
+
+                    </button>
+
+                    <button onclick="addToCart('Floral Kurti',699)">
+
+                        🛒 Add To Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="product-card dress">
+
+                <img src="https://images.pexels.com/photos/1462637/pexels-photo-1462637.jpeg">
+
+                <h3>Party Dress</h3>
+
+                <p>₹1499</p>
+
+                <div class="card-buttons">
+
+                    <button onclick="toggleWishlist('Party Dress',1499)">
+
+                        ❤️ Wishlist
+
+                    </button>
+
+                    <button onclick="addToCart('Party Dress',1499)">
+
+                        🛒 Add To Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="product-card top">
+
+                <img src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg">
+
+                <h3>Western Top</h3>
+
+                <p>₹499</p>
+
+                <div class="card-buttons">
+
+                    <button onclick="toggleWishlist('Western Top',499)">
+
+                        ❤️ Wishlist
+
+                    </button>
+
+                    <button onclick="addToCart('Western Top',499)">
+
+                        🛒 Add To Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ================= WISHLIST DRAWER ================= -->
+
+    <div class="wishlist-drawer" id="wishlistDrawer">
+
+        <div class="drawer-header">
+
+            <h2>
+
+                ❤️ Wishlist
+
+            </h2>
+
+            <button id="closeWishlist">
+
+                ✖
+
+            </button>
+
+        </div>
+
+        <div id="wishlistItems">
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- ================= CART DRAWER ================= -->
+
+    <div class="cart-drawer" id="cartDrawer">
+
+        <div class="drawer-header">
+
+            <h2>
+
+                🛒 Cart
+
+            </h2>
+
+            <button id="closeCart">
+
+                ✖
+
+            </button>
+
+        </div>
+
+        <div id="cartItems">
+
+        </div>
+
+        <h3 id="totalPrice">
+
+            Total : ₹0
+
+        </h3>
+
+    </div>
+
+
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+   <footer id="contact">
+
+    <div class="footer-container">
+
+        <h2>Women Fashion Store</h2>
+
+        <p class="footer-tagline">
+            Elegant Fashion For Every Occasion
+        </p>
+
+        <div class="footer-contact">
+
+            <p>📍 New Delhi, India</p>
+
+            <p>📞 +91 9876543210</p>
+
+            <p>✉ support@womenfashionstore.com</p>
+
+        </div>
+
+        <div class="footer-social">
+
+            <a href="#">Instagram</a>
+
+            <a href="#">Facebook</a>
+
+            <a href="#">Pinterest</a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Women Fashion Store | All Rights Reserved
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
